@@ -157,8 +157,6 @@ export default class SlidingPanel extends Component {
     ).start(() => this.props.onAnimationStop());
   }
 
-
-
   
   onRequestStart() {
     sliderPosition = (this.props.slidingPanelLayoutHeight ? this.props.slidingPanelLayoutHeight : height-this.props.headerLayoutHeight)
