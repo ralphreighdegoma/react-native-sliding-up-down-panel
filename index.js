@@ -67,7 +67,7 @@ export default class SlidingPanel extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     var a = 0;
     this.state.panResponder = PanResponder.create({
       onStartShouldSetPanResponder : () => true,
@@ -157,6 +157,9 @@ export default class SlidingPanel extends Component {
     ).start(() => this.props.onAnimationStop());
   }
 
+
+
+  
   onRequestStart() {
     sliderPosition = (this.props.slidingPanelLayoutHeight ? this.props.slidingPanelLayoutHeight : height-this.props.headerLayoutHeight)
     this.props.onAnimationStart();
@@ -214,6 +217,7 @@ SlidingPanel.propTypes = {
   onDrag: (event, gestureState) => {},
   onAnimationStart: () => {},
   onAnimationStop: () => {},
+
 };
 
 SlidingPanel.defaultProps = {
